@@ -3,7 +3,6 @@
     "name": "ASD Screening",
     "slug": "asd-screening-app",
     "version": "1.0.0",
-    "entry-point":"./index.ts",
     "newArchEnabled": false,
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
