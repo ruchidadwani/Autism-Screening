@@ -5,17 +5,35 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
     "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
       "backgroundColor": "#0A0E1A"
     },
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.clinic.asdscreening",
       "infoPlist": {
-        "NSCameraUsageDescription": "This app requires camera access to perform real-time behavioral analysis for autism screening.",
+        "NSCameraUsageDescription": "ASD Screening needs camera access to analyze your child's behavioral patterns.",
         "NSMicrophoneUsageDescription": "Microphone access is required by the camera framework.",
         "NSPhotoLibraryUsageDescription": "Access needed to save session recordings."
       }
+    },
+    "android": {
+      "package": "com.clinic.asdscreening",
+      "newArchEnabled": false,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#0A0E1A"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE"
+      ]
     },
     "assetBundlePatterns": [
       "**/*",
@@ -29,7 +47,18 @@
           "enableMicrophonePermission": false
         }
       ],
+      [
+        "react-native-fast-tflite",
+        {
+          "enableCoreMLDelegate": false
+        }
+      ],
       "expo-av"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8e383f9a-0e4b-46da-bf8d-d2a9053b2aef"
+      }
+    }
   }
 }
